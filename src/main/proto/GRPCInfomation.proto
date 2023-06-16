@@ -1,0 +1,22 @@
+// version
+syntax = "proto3";
+option java_package = "io.grpc";
+
+// Service interface. Defines request parameters and corresponding results
+service InfoRpcService {
+  rpc transferInformation(InfoRpcRequest) returns(InfoRpcResponse){}
+}
+
+// Defining the request body
+message InfoRpcRequest {
+  string message = 1;
+  int32 integerValue = 2;
+  double doubleValue = 3;
+}
+
+// Defining the response content
+message InfoRpcResponse {
+  string message = 1;
+  int32 integerValue = 2;
+  double doubleValue = 3;
+}
